@@ -1,0 +1,405 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'sans-serif;
+}
+body{
+    background: #101010;
+    color: #fff;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 100;
+    
+}
+
+
+
+.logo{
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+  
+}
+
+.logo span{
+    display: inline-block;
+    text-transform: uppercase;
+    animation: flip 8s infinite;
+    animation-delay: calc(.2s * var(--i))
+
+}
+
+
+.stableLogo{
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    
+
+}
+.stableLogo span{
+    display: inline-block;
+    text-transform: uppercase;
+    animation: flip 5s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+.navbar a {
+   
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1.5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+.aboutNavbar a{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+  
+    
+}
+
+.aboutNavbar a:hover,
+.aboutNavbar a.active {
+    color: #61CE70;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #61CE70;
+}
+
+.Home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0px;
+}
+
+.contactHome{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0px;
+}
+.contactHome-content{
+    max-width: 640px;
+}
+
+.contactHome-content h3{
+    font-size: 32px;
+    font-weight: 700px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    animation: slideRight 3s ease forwards;
+    animation-delay: 0s;
+    
+}
+.contactHome-content h4{
+    font-size: 42px;
+    margin-bottom: 30px;
+    animation: slideLeft 3s ease forwards;
+    animation-delay: 0s;
+    
+}
+
+.contact-info-phone h4{
+    font-size: 20px;
+    animation: zoomIn 3s ease forwards , float 4s ease-in-out infinite;
+    animation-delay: 0s;
+    
+}
+.contact-info-phone p {
+    color: #61CE70;
+    font-size: 20px;
+    animation: zoomIn 3s ease forwards , float 4s ease-in-out infinite;
+    animation-delay: 0s;
+  
+ }
+
+ .contact-info-phone p:hover{
+    transition:  .3s;
+    color: #fff;
+ }
+.contact-info-email h4{
+    font-size: 20px;
+    animation: zoomIn 3s ease forwards ,float 3s ease-in-out infinite;
+    animation-delay: 0s;
+
+}
+
+.contact-info-email p {
+    color: #61CE70;
+    font-size: 20px;
+    animation:zoomIn 3s ease forwards , float 3s ease-in-out infinite;
+    animation-delay: 0s;
+       
+   }
+
+.contact-info-email p:hover{
+    transition: .3s;
+    color: #fff;
+}
+
+
+.home-content{
+    max-width: 640px;
+}
+.home-img img {
+    max-width: 100%;
+    opacity: 0;
+    
+    animation: zoomIn 3s ease forwards , float 4s ease-in-out infinite;
+    animation-delay: 2s,6s;
+    
+}
+
+.aboutHome-img img{
+    max-width: 100%;
+    opacity: 0;
+    
+    
+    animation: zoomIn 3s ease forwards , float 4s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+
+
+
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0px 0;
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+    animation-delay: 1.2s;    /*.3*/
+}
+
+.home-content h3{
+    
+    font-size: 32px;
+    font-weight: 700px;
+    text-decoration: none;
+    animation: slideBottom 2s ease forwards;
+    opacity: 0;
+    animation-delay: .9s;
+}
+
+
+.aboutHome-content h3{
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700px;
+    animation: slideBottom 2s ease forwards;
+    opacity: 0;
+    animation-delay: .9s;
+     
+}
+
+.aboutHome-content{
+    max-width: 640px;
+}
+
+.aboutHome-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: slideLeft 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+
+}
+
+
+.home-content  h3 span{
+    color: #61CE70;
+}
+
+
+
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 45px;
+    animation: slideTop 2s ease forwards;
+    opacity: 0;
+    animation-delay: .9s;
+}
+
+.home-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: slideLeft 1.5s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+
+  
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #61CE70;
+    border-radius: 40px;
+    font-size: 20px;
+    color: #1f242d;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 10px #61CE70;
+    animation: slideTop 2.5s ease forwards , float 4s ease-in-out infinite;
+    
+    opacity: 0;
+    animation-delay: 1.5s,6s;
+
+  }
+  
+.cursor123 {
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #61CE70;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.5;
+      transition: .1s;
+  
+}
+
+
+/*animacie*/
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(130px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        
+    }
+    50% {
+        transform: translateY(-10px);
+        
+    }
+    100% {
+        transform: translateY(0px);
+        
+    }
+    
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity:0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+.audio-container{
+    padding: 10px 10%;
+    
+}
+.audio-container audio {
+    
+    width: 250px;
+    background-color: #101010;
+    border: 1px solid #101010;
+    padding: 5px;
+  }
+  
+  .audio-container audio::-webkit-media-controls-panel,
+  .audio-container audio::-webkit-media-controls-play-button,
+  .audio-container audio::-webkit-media-controls-volume-slider  {
+    background-color:#61CE70;
+    
+  }
+
+  

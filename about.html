@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"?>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animated CV website</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <div class="cursor123"></div>
+</head>
+
+<body>  
+    
+    
+
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const cursorFollower = document.querySelector(".cursor123");
+    
+          function updateCursorPosition(event) {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const scrollY = window.pageYOffset;
+    
+            const cursorFollowerWidth = cursorFollower.offsetWidth;
+            const cursorFollowerHeight = cursorFollower.offsetHeight;
+    
+            const translateX = mouseX - cursorFollowerWidth / 2;
+            const translateY = mouseY + scrollY - cursorFollowerHeight / 2;
+    
+            cursorFollower.style.transform = `translate(${translateX}px, ${translateY}px)`;
+          }
+    
+          document.addEventListener("mousemove", updateCursorPosition);
+          window.addEventListener("scroll", updateCursorPosition);
+        });
+    </script>
+      
+
+    <header class="header">
+        <a href="index.html" class="stableLogo">
+            <span style="--i:1">M</span>
+            <span style="--i:2">y</span>
+            <span style="--i:3">C</span>
+            <span style="--i:4">v</span>
+            <span style="--i:5">.</span>
+         
+        </a>
+       
+            <nav class="aboutNavbar">
+                
+                    <a href="index.html" style="--i:1;" >Home</a>
+                
+                    
+                    <a href="about.html" style="--i:2;" class="active" >About</a>
+                    
+                    <a href="skills.html" style="--i:3;">Skills</a>
+                
+                    <a href="contact.html" style="--i:4;">Contact</a>
+                
+            </nav>
+
+    </header>
+
+
+    <section class="Home">
+        <div class="aboutHome-content">
+            <h3>I'm a fresh graduate at High school
+                and I have a high interest in IT since I was a kid <span style="color: #61CE70">.</span></h3>
+           
+            <p>I'm a good self learner with high discipline and good mentality, I could do anything I can imagine just like I made this
+                portofolio to prove myself that I can do it. I went through a few challenges but challenges have to be overcome <span style="color: #61CE70;" > .</span>
+            </p>
+            
+        </div>
+        <div class="aboutHome-img">
+            <a href="https://github.com/Mike3861" target=_blank>
+            <img src="pngfind.com-github-logo-png-1766942.png"  height="300" alt="This is a picture of G" title="My github">
+        </a>
+        
+        </div>
+
+    </section>
+
+
+</body>
+</html>

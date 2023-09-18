@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"?>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animated CV website</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <div class="cursor123"></div>
+</head>
+
+<body>  
+    
+    
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const cursorFollower = document.querySelector(".cursor123");
+    
+          function updateCursorPosition(event) {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const scrollY = window.pageYOffset;
+    
+            const cursorFollowerWidth = cursorFollower.offsetWidth;
+            const cursorFollowerHeight = cursorFollower.offsetHeight;
+    
+            const translateX = mouseX - cursorFollowerWidth / 2;
+            const translateY = mouseY + scrollY - cursorFollowerHeight / 2;
+    
+            cursorFollower.style.transform = `translate(${translateX}px, ${translateY}px)`;
+          }
+    
+          document.addEventListener("mousemove", updateCursorPosition);
+          window.addEventListener("scroll", updateCursorPosition);
+        });
+    </script>
+      
+
+    <header class="header">
+        <a href="index.html" class="stableLogo">
+            <span style="--i:1">M</span>
+            <span style="--i:2">y</span>
+            <span style="--i:3">C</span>
+            <span style="--i:4">v</span>
+            <span style="--i:5">.</span>
+         
+        </a>
+       
+            <nav class="aboutNavbar">
+                
+                    <a href="index.html" style="--i:1;" >Home</a>
+                
+                    
+                    <a href="about.html" style="--i:2;"  >About</a>
+                    
+                    <a href="skills.html" style="--i:3;" >Skills</a>
+                
+                    <a href="contact.html" style="--i:4;" class="active">Contact</a>
+                
+            </nav>
+
+    </header>
+
+
+    <section class="contactHome">
+        <div class="contactHome-content">
+            <h3>Do you have any Questions ?</h3>
+            <h4> I'm at yout services</h4>
+            
+        </div>    
+            <div class="contact-info-phone">
+                <h4>Call me</h4>
+                <p>+421 0944 158 740</p>
+
+            </div>
+            
+            <div class="contact-info-email">
+                <h4>Email</h4>
+                <p>mike.fekete02@gmail.com</p>
+
+            </div>
+
+
+          
+            
+            
+        
+        <div class="aboutHome-img">
+            <a href="https://github.com/Mike3861" target=_blank>
+            <img src="pngfind.com-github-logo-png-1766942.png"  height="300" alt="This is a picture of G" title="My github">
+        </a>
+        
+        </div>
+
+    </section>
+
+
+</body>
+</html>

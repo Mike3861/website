@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"?>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animated CV website</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <div class="cursor123"></div>
+</head>
+
+<body>  
+    
+    
+
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const cursorFollower = document.querySelector(".cursor123");
+    
+          function updateCursorPosition(event) {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            const scrollY = window.pageYOffset;
+    
+            const cursorFollowerWidth = cursorFollower.offsetWidth;
+            const cursorFollowerHeight = cursorFollower.offsetHeight;
+    
+            const translateX = mouseX - cursorFollowerWidth / 2;
+            const translateY = mouseY + scrollY - cursorFollowerHeight / 2;
+    
+            cursorFollower.style.transform = `translate(${translateX}px, ${translateY}px)`;
+          }
+    
+          document.addEventListener("mousemove", updateCursorPosition);
+          window.addEventListener("scroll", updateCursorPosition);
+        });
+    </script>
+      
+
+    <header class="header">
+                <a href="index.html" class="logo">
+                    <span style="--i:1">M</span>
+                    <span style="--i:2">y</span>
+                    <span style="--i:3">C</span>
+                    <span style="--i:4">v</span>
+                    <span style="--i:5">.</span>
+                 
+                </a>
+       
+            <nav class="navbar">
+                
+                    <a href="index.html" style="--i:1;" class="active">Home</a>
+                
+                    
+                    <a href="about.html" style="--i:2;">About</a>
+                    
+                    <a href="skills.html" style="--i:3;">Skills</a>
+                
+                    <a href="contact.html" style="--i:4;">Contact</a>
+                
+            </nav>
+
+    </header>
+
+
+    <section class="Home">
+        <div class="home-content">
+            <h3>Hello , It's Me</h3>
+            <h1 class="text">Mike Fekete</h1>
+            <h3>and I'm interested in <span id="textString"></span>.</h3> 
+            <p>Never complain or make excuses. If something seems unfair, just prove yourself by working twice as hard and being twice as good.</p>
+            
+            <a href="./MikeCv.pdf" target=_blank class="btn">Download CV </a>
+
+            
+        </div>
+        <div class="home-img">
+            <a href="https://github.com/Mike3861" target=_blank>
+            <img src="pngfind.com-github-logo-png-1766942.png"  height="300" alt="This is a picture of G" title="My github">
+        </a>
+        </div>
+
+    </section>
+
+   
+        
+   
+    <div class="audio-container">
+        <audio controls autoplay  loop>
+            
+            <source src="audio.html.mp3" type="audio/mpeg" title="song name : GESAFFELSTEIN - ALEPH">
+            Your browser does not support the audio element.
+          </audio>
+    </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+
+        var typed = new Typed('#textString', {
+          strings: ['app development' , 'Web security testing','front end development'],
+          typeSpeed: 100,
+          backSpeed: 130,
+          loop: true
+        });
+    </script>
+    
+    
+
+    
+
+    
+</body>
+</html>
